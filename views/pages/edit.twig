@@ -5,7 +5,7 @@
 
 
         <form action="{{ url.to('page/add') }}" method="post">
-            {% include 'partials/edit_form.twig' with {'page': page} %}
+            {% include 'partials/form.twig' with {'page': page} %}
 
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Update</button>

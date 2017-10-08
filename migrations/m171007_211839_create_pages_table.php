@@ -17,7 +17,7 @@ class m171007_211839_create_pages_table extends Migration
             [
                 'page_id'    => $this->primaryKey(),
                 'parent_id'  => $this->integer(),
-                'slug'       => $this->string(55),
+                'slug'       => $this->string(55)->notNull(),
                 'title'      => $this->string(55)->notNull(),
                 'body'       => $this->text()->notNull(),
                 'created_at' => $this->timestamp(),

@@ -1,7 +1,9 @@
-<h2>
-    Root
-    <a class="btn btn-primary btn-xs" href="{{ path(['pages/create']) }}">Add Page</a>
-</h2>
+<h2>Root</h2>
+<p>
+    <a class="btn btn-primary btn-xs" href="{{ path(['pages/create']) }}">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+    </a>
+</p>
 
 <div>
     {% if pages %}

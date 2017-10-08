@@ -1,0 +1,10 @@
+<ul class="breadcrumb">
+    <li><a href="{{ url(['site/main']) }}">Root</a></li>
+    {% for breadcrumb in this.params.breadcrumbs %}
+        <li>
+            <a href="{{ breadcrumb.getUrl() }}">
+                {{ breadcrumb.getTitle() }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

@@ -3,18 +3,35 @@ namespace app\controllers;
 
 use app\models\Page;
 use Yii;
+use yii\filters\VerbFilter;
 use yii\helpers\Url;
-use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 
-class PagesController extends Controller
+class PagesController extends BaseController
 {
+    /**
+     * @inheritdoc
+     */
+    public function behaviors()
+    {
+        return [
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'delete' => ['POST'],
+                ],
+            ],
+        ];
+    }
+
     public function actionShow($path)
     {
         $page = Page::find()->byPath($path)->one();
         if (!$page) {
             throw new NotFoundHttpException('Page not exists');
         }
+
+        $this->setBreadcrumbs($page->getBreadcrumbs());
 
         return $this->render('show.twig', [
             'page' => $page,
@@ -33,6 +50,10 @@ class PagesController extends Controller
             $page->created_at = date("Y-m-d H:i:s");
             $page->updated_at = date("Y-m-d H:i:s");
             if ($page->save()) {
+                Yii::$app->session->addFlash(
+                    'success',
+                    'Page has been successfully created!'
+                );
                 return $this->redirect(Url::to([
                     'pages/show', 'path' => $page->getPath()]
                 ));
@@ -54,6 +75,10 @@ class PagesController extends Controller
         if ($page->load(Yii::$app->request->post()) && $page->validate()) {
             $page->updated_at = date("Y-m-d H:i:s");
             if ($page->save()) {
+                Yii::$app->session->addFlash(
+                    'success',
+                    'Page has been successfully updated!'
+                );
                 return $this->redirect(
                     Url::to(['pages/show', 'path' => $page->getPath()])
                 );
@@ -70,6 +95,11 @@ class PagesController extends Controller
         $page = Page::find()->byPath($path)->one();
         if (!$page) {
             return new NotFoundHttpException('Page not exists');
+        }
+
+        foreach ($page->getChildren() as $child) {
+            $child->parent_id = $page->parent_id;
+            $child->save();
         }
 
         if ($parent = $page->getParent()) {

@@ -4,9 +4,8 @@ namespace app\controllers;
 
 use app\models\Page;
 use Yii;
-use yii\web\Controller;
 
-class SiteController extends Controller
+class SiteController extends BaseController
 {
     /**
      * Displays homepage.
