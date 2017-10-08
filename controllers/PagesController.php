@@ -1,7 +1,7 @@
 <?php
 namespace app\controllers;
 
-use app\models\Page;
+use gapp\models\Page;
 use Yii;
 use yii\helpers\Url;
 use yii\web\Controller;

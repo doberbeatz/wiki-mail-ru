@@ -1,6 +1,0 @@
-#!/bin/bash
-
-echo 'Staring project...'
-docker-compose up -d
-docker exec -ti wiki_web bash -c 'cd /project/ && ./yii migrate up'
-echo 'Project has been started on localhost:8080'
