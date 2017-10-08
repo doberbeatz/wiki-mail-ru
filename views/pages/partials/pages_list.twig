@@ -1,0 +1,12 @@
+{% for page in pages %}
+    <li>
+        <a href="{{ html.decode(url('pages/show', {'path': page.getPath()})) }}">
+            {{ page.title }}
+        </a>
+        {% if page.getChildren() %}
+            <ul>
+                {% include 'pages/partials/pages_list.twig' with {'pages': page.getChildren()} %}
+            </ul>
+        {% endif %}
+    </li>
+{% endfor %}

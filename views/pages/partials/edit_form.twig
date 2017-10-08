@@ -1,0 +1,30 @@
+<input type="hidden" name="_csrf" value="{{ app.request.getCsrfToken() }}" />
+<div class="form-group {% if page.hasErrors('title') %}has-error{% endif %}">
+    <label for="title">Title</label>
+    <input type="text" class="form-control"
+           id="title" name="title"
+           placeholder="Title" value="{{ page.title }}"
+    >
+</div>
+{% include 'layouts/partials/errors.twig' with {
+    'errors': page.getErrors('title')
+} %}
+
+<div class="form-group {% if page.hasErrors('slug') %}has-error{% endif %}">
+    <label for="slug">Slug</label>
+    <input type="text" class="form-control"
+           id="slug" name="slug"
+           placeholder="Slug" value="{{ page.slug }}"
+    >
+</div>
+{% include 'layouts/partials/errors.twig' with {
+    'errors': page.getErrors('slug')
+} %}
+
+<div class="form-group {% if page.hasErrors('body') %}has-error{% endif %}">
+    <label for="body">Body</label>
+    <textarea class="form-control" name="body" id="body" rows="10">{{ page.body }}</textarea>
+</div>
+{% include 'layouts/partials/errors.twig' with {
+    'errors': page.getErrors('body')
+} %}

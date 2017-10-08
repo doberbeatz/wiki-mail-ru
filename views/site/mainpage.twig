@@ -1,0 +1,14 @@
+<h2>
+    Root
+    <a class="btn btn-primary btn-xs" href="{{ path(['pages/create']) }}">Add Page</a>
+</h2>
+
+<div>
+    {% if pages %}
+        <ul class="list-unstyled">
+            {% include 'pages/partials/pages_list.twig' with {'pages': pages} %}
+        </ul>
+    {% else %}
+        <p>No pages were created.</p>
+    {% endif %}
+</div>

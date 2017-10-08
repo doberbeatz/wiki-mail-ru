@@ -1,0 +1,20 @@
+<h2>{{ page.title }}</h2>
+<p>
+    <a href="{{ path('pages/create', {'path': page.getPath()}) }}"
+       class="btn btn-primary btn-xs"
+    >
+        Add sub page
+    </a>
+    <a href="{{ html.decode(url('pages/edit', {'path': page.getPath()})) }}"
+       class="btn btn-default btn-xs"
+    >
+        Edit
+    </a>
+    <a href="{{ html.decode(url('pages/delete', {'path': page.getPath()})) }}"
+       class="btn btn-danger btn-xs"
+    >
+        Delete
+    </a>
+</p>
+
+<p>{{ page.body|toHtml|raw }}</p>

@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-md-8">
+        <h1>Edit: {{ page.title }}</h1>
+        <p class="text-muted">Last update: {{ page.updated_at }}</p>
+
+
+        <form action="{{ url.to('page/add') }}" method="post">
+            {% include 'partials/edit_form.twig' with {'page': page} %}
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Update</button>
+                <a href="{{ url('pages/show', {'path': page.getPath()}) }}"
+                   class="btn btn-default"
+                >
+                    Cancel
+                </a>
+            </div>
+        </form>
+    </div>
+</div>

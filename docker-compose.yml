@@ -1,0 +1,37 @@
+version: '3'
+services:
+
+  nginx:
+    image: nginx
+    container_name: wiki_nginx
+    volumes:
+      - ./:/project
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 8080:80
+    env_file: .env.nginx
+    links:
+      - web
+    restart: always
+
+  web:
+    build: .
+    container_name: wiki_web
+    volumes:
+      - ./:/project
+    ports:
+      - 9000
+    env_file:
+      - .env.web
+    links:
+      - db
+    restart: always
+
+  db:
+    image: mysql
+    container_name: wiki_db
+    ports:
+      - 3306
+    env_file:
+      - .env.web
+    restart: always

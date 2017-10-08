@@ -1,0 +1,97 @@
+2017/10/08 18:24:39 [error] 5#5: *376 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request: site/error in /project/vendor/yiisoft/yii2/base/Controller.php:127
+Stack trace:
+#0 /project/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#1 /project/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#2 /project/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#4 {main}
+Previous exception:
+yii\web\NotFoundHttpException in /project/controllers/PagesController.php:17
+Stack trace:
+#0 [internal function]: app\controllers\PagesController->actionShow('first_page/sub_...')
+#1 /project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /project/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\Inline" while reading upstream, client: 172.18.0.1, server: wiki.local, request: "GET /first_page/sub_page HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/first_page"
+2017/10/08 18:31:44 [error] 5#5: *387 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request: site/error in /project/vendor/yiisoft/yii2/base/Controller.php:127
+Stack trace:
+#0 /project/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#1 /project/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#2 /project/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#4 {main}
+Previous exception:
+yii\web\NotFoundHttpException in /project/controllers/PagesController.php:17
+Stack trace:
+#0 [internal function]: app\controllers\PagesController->actionShow('first_page/sub_...')
+#1 /project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /project/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\Inline" while reading upstream, client: 172.18.0.1, server: wiki.local, request: "GET /first_page/sub_page HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/first_page"
+2017/10/08 18:33:03 [error] 5#5: *390 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+Twig_Error_Syntax: Unknown "nl2br" function. in /project/views/site/error.twig:4
+Stack trace:
+#0 /project/vendor/twig/twig/lib/Twig/ExpressionParser.php(374): Twig_ExpressionParser->getFunctionNodeClass('nl2br', 4)
+#1 /project/vendor/twig/twig/lib/Twig/ExpressionParser.php(162): Twig_ExpressionParser->getFunctionNode('nl2br', 4)
+#2 /proj" while reading upstream, client: 172.18.0.1, server: wiki.local, request: "GET /first_page/sub_page HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/first_page"
+2017/10/08 18:33:03 [error] 5#5: *390 FastCGI sent in stderr: "ect/vendor/twig/twig/lib/Twig/ExpressionParser.php(102): Twig_ExpressionParser->parsePrimaryExpression()
+#3 /project/vendor/twig/twig/lib/Twig/ExpressionParser.php(55): Twig_ExpressionParser->getPrimary()
+#4 /project/vendor/twig/twig/lib/Twig/Parser.php(147): Twig_ExpressionParser->parseExpression()
+#5 /project/vendor/twig/twig/lib/Twig/Parser.php(103): Twig_Parser->subparse(NULL, false)
+#6 /project/vendor/twig/twig/lib/Twig/Environment.php(712): Twig_Parser->parse(Object(Twig_TokenStream))
+#7 /project/vendor/twig/twig/lib/Twig/Environment.php(770): Twig_Environment->parse(Object(Twig_TokenStream))
+#8 /project/ve" while reading upstream, client: 172.18.0.1, server: wiki.local, request: "GET /first_page/sub_page HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/first_page"
+2017/10/08 18:33:39 [error] 5#5: *390 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+Twig_Error_Syntax: Unknown "nl2br" function. in /project/views/site/error.twig:4
+Stack trace:
+#0 /project/vendor/twig/twig/lib/Twig/ExpressionParser.php(374): Twig_ExpressionParser->getFunctionNodeClass('nl2br', 4)
+#1 /project/vendor/twig/twig/lib/Twig/ExpressionParser.php(162): Twig_ExpressionParser->getFunctionNode('nl2br', 4)
+#2 /proj" while reading upstream, client: 172.18.0.1, server: wiki.local, request: "GET /first_page/sub_page HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/first_page"
+2017/10/08 18:33:39 [error] 5#5: *390 FastCGI sent in stderr: "ect/vendor/twig/twig/lib/Twig/ExpressionParser.php(102): Twig_ExpressionParser->parsePrimaryExpression()
+#3 /project/vendor/twig/twig/lib/Twig/ExpressionParser.php(55): Twig_ExpressionParser->getPrimary()
+#4 /project/vendor/twig/twig/lib/Twig/Parser.php(147): Twig_ExpressionParser->parseExpression()
+#5 /project/vendor/twig/twig/lib/Twig/Parser.php(103): Twig_Parser->subparse(NULL, false)
+#6 /project/vendor/twig/twig/lib/Twig/Environment.php(712): Twig_Parser->parse(Object(Twig_TokenStream))
+#7 /project/vendor/twig/twig/lib/Twig/Environment.php(770): Twig_Environment->parse(Object(Twig_TokenStream))
+#8 /project/ve" while reading upstream, client: 172.18.0.1, server: wiki.local, request: "GET /first_page/sub_page HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/first_page"
+2017/10/08 18:33:41 [error] 5#5: *390 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+Twig_Error_Syntax: Unknown "nl2br" function. in /project/views/site/error.twig:4
+Stack trace:
+#0 /project/vendor/twig/twig/lib/Twig/ExpressionParser.php(374): Twig_ExpressionParser->getFunctionNodeClass('nl2br', 4)
+#1 /project/vendor/twig/twig/lib/Twig/ExpressionParser.php(162): Twig_ExpressionParser->getFunctionNode('nl2br', 4)
+#2 /proj" while reading upstream, client: 172.18.0.1, server: wiki.local, request: "GET /first_page/sub_page HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/first_page"
+2017/10/08 18:33:41 [error] 5#5: *390 FastCGI sent in stderr: "ect/vendor/twig/twig/lib/Twig/ExpressionParser.php(102): Twig_ExpressionParser->parsePrimaryExpression()
+#3 /project/vendor/twig/twig/lib/Twig/ExpressionParser.php(55): Twig_ExpressionParser->getPrimary()
+#4 /project/vendor/twig/twig/lib/Twig/Parser.php(147): Twig_ExpressionParser->parseExpression()
+#5 /project/vendor/twig/twig/lib/Twig/Parser.php(103): Twig_Parser->subparse(NULL, false)
+#6 /project/vendor/twig/twig/lib/Twig/Environment.php(712): Twig_Parser->parse(Object(Twig_TokenStream))
+#7 /project/vendor/twig/twig/lib/Twig/Environment.php(770): Twig_Environment->parse(Object(Twig_TokenStream))
+#8 /project/ve" while reading upstream, client: 172.18.0.1, server: wiki.local, request: "GET /first_page/sub_page HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/first_page"
+2017/10/08 18:36:25 [error] 5#5: *398 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+Error: Class 'app\controllers\Yii' not found in /project/controllers/SiteController.php:27
+Stack trace:
+#0 [internal function]: app\controllers\SiteController->actionError()
+#1 /project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /project/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#3 /project/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#4 /project/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#5 /project/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#6 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#7 {main}
+Previous exception:
+yii\web\NotFoundHttpException in /project/controllers/PagesController.php:17
+Stack trace:
+#0 [internal function]: app\co" while reading upstream, client: 172.18.0.1, server: wiki.local, request: "GET /first_page/sub_page HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/first_page"
+2017/10/08 18:36:27 [error] 5#5: *398 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+Error: Class 'app\controllers\Yii' not found in /project/controllers/SiteController.php:27
+Stack trace:
+#0 [internal function]: app\controllers\SiteController->actionError()
+#1 /project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /project/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#3 /project/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#4 /project/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#5 /project/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#6 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#7 {main}
+Previous exception:
+yii\web\NotFoundHttpException in /project/controllers/PagesController.php:17
+Stack trace:
+#0 [internal function]: app\co" while reading upstream, client: 172.18.0.1, server: wiki.local, request: "GET /first_page/sub_page HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/first_page"
