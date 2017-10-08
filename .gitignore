@@ -4,7 +4,9 @@ composer.phar
 .DS_Store
 
 /vendor
-/logs/*
+/logs/nginx.error.log
+/logs/web_access.log
+/logs/web_error.log
 
 phpunit.phar
 /phpunit.xml
