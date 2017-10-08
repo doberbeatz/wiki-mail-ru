@@ -5,6 +5,7 @@ For begin do following things:
 - Install latest Docker
 - Install Composer
 - `git clone git@github.com:doberbeatz/wiki-mail-ru.git`
+- `cd ./wiki-mail-ru`
 - `composer install`
 - `docker-compose up -d`
 
