@@ -14,4 +14,7 @@ After starting all containers, follow these steps:
 
 After all you will see the project on `localhost:8080`.
 
+If you want to stop and remove all containers do this in project's root:
+- `docker-compose stop && docker-compose rm -f`
+
 Enjoy.
